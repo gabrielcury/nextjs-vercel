@@ -1,5 +1,5 @@
 async function sms(request, response) {
-    const apiSecret = process.env.SENHA;
+    const apiSecret = process.env.SENHA; 
     const dynamicDate = new Date();
 
     const smsResponse = await fetch(`http://webservices.twwwireless.com.br/reluzcapwcf/reluzcap.svc/enviasms/${apiSecret}`);
