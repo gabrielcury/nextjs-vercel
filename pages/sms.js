@@ -8,7 +8,7 @@ function SMS(request, response) {
     alert(event.target.mensagem.value);
     
     const res = await fetch(
-      'https://nextjs-two-rouge-20.vercel.app/sms',
+      'http://webservices2.twwwireless.com.br/reluzcap/wsreluzcap.asmx/EnviaSMS?NumUsu=${API.SMS.numUsu}&Senha=${API.SMS.senha}&SeuNum=${idSMS}&Celular=${numero}&Mensagem=${mensagem}',
       {
         body: JSON.stringify({
           name: event.target.numero.value,
