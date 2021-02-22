@@ -1,4 +1,5 @@
-function SMS() {
+function SMS(request, response) {
+  
   const sendMessage = async event => {
     //event.preventDefault()
     
