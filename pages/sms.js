@@ -2,10 +2,7 @@ function SMS(request, response) {
   
   const sendMessage = async event => {
     event.preventDefault()
-    
-    
-    alert(event.target.numero.value);
-    alert(event.target.mensagem.value);
+   
     
     let idSMS  = "";
     let senha  = "";
@@ -14,8 +11,13 @@ function SMS(request, response) {
     let numero = event.target.numero.value;
     let mensagem = event.target.mensagem.value;
     
+    
+    alert(event.target.numero.value);
+    alert(event.target.mensagem.value);
+    
+    
     const res = await fetch(
-      'http://webservices2.twwwireless.com.br/reluzcap/wsreluzcap.asmx/EnviaSMS?NumUsu='+numUsu+'&Senha='+senha+'&SeuNum='+idSMS+'&Celular'+numero+'&Mensagem='+mensagem,
+      'http://webservices2.twwwireless.com.br/reluzcap/wsreluzcap.asmx/EnviaSMS?NumUsu=',
       {
         
         body: JSON.stringify({
