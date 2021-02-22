@@ -1,12 +1,16 @@
 function SMS() {
-  const registerUser = async event => {
+  const sendMessage = async event => {
     event.preventDefault()
 
+      
+    alert(event.target.name.value);
+    
     const res = await fetch(
       'https://hooks.zapier.com/hooks/catch/123456/abcde',
       {
         body: JSON.stringify({
-          name: event.target.name.value
+          name: event.target.name.value,
+          numero: event.target.numero.value
         }),
         headers: {
           'Content-Type': 'application/json'
@@ -20,9 +24,12 @@ function SMS() {
   }
 
   return (
-    <form onSubmit={registerUser}>
-      <label htmlFor="name">Numero</label>
-      <input id="name" name="name" type="text" autoComplete="name" required />
+    <form onSubmit={sendMessage}>
+      <label htmlFor="numero">Número</label>
+      <input id="numero" name="numero" type="text" autoComplete="numero" required />
+       <br />
+      <label htmlFor="mensagem">Mensagem</label>
+      <input id="mensagem" name="mensagem" type="text" autoComplete="mensagem" required />
       <button type="submit">Enviar</button>
     </form>
   )
