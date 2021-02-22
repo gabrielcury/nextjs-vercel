@@ -1,4 +1,30 @@
 async function sms(request, response) {
+    
+    
+    const response = req.body.data;
+    
+   // event.preventDefault()
+    
+    /*
+    const res = await fetch(
+      'http://webservices.twwwireless.com.br/reluzcapwcf/reluzcap.svc/enviasms/',
+      {
+        body: JSON.stringify({
+          data: req.body.data
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        method: 'POST'
+      }
+    )
+
+    const result = await res.json()
+    */
+    // result
+    
+    
+    /*
     const apiSecret = process.env.SENHA; 
     const dynamicDate = new Date();
 
@@ -12,6 +38,9 @@ async function sms(request, response) {
         date: dynamicDate.toGMTString(),
         respostaEnvio: respostaEnvio
     });
+    */
+   
+    
 }
 
 export default sms;
