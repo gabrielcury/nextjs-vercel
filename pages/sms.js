@@ -1,7 +1,7 @@
 function SMS(request, response) {
   
   const sendMessage = async event => {
-    //event.preventDefault()
+    event.preventDefault()
     
     
     alert(event.target.numero.value);
