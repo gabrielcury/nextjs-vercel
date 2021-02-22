@@ -1,7 +1,7 @@
 async function sms(request, response) {
     
     
-    const response = req.body.data;
+    const response = req;
     
    // event.preventDefault()
     
