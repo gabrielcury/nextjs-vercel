@@ -1,16 +1,17 @@
 function SMS() {
   const sendMessage = async event => {
-    event.preventDefault()
-
-      
-    alert(event.target.name.value);
+    //event.preventDefault()
+    
+    
+    alert(event.target.numero.value);
+    alert(event.target.mensagem.value);
     
     const res = await fetch(
-      'https://hooks.zapier.com/hooks/catch/123456/abcde',
+      'https://url',
       {
         body: JSON.stringify({
-          name: event.target.name.value,
-          numero: event.target.numero.value
+          name: event.target.numero.value,
+          numero: event.target.mensagem.value
         }),
         headers: {
           'Content-Type': 'application/json'
