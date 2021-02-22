@@ -8,7 +8,7 @@ function SMS(request, response) {
     alert(event.target.mensagem.value);
     
     const res = await fetch(
-      'https://url',
+      'https://nextjs-two-rouge-20.vercel.app/sms',
       {
         body: JSON.stringify({
           name: event.target.numero.value,
