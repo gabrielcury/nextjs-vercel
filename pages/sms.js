@@ -8,7 +8,7 @@ function SMS(request, response) {
     alert(event.target.mensagem.value);
     
     const res = await fetch(
-      'http://webservices.twwwireless.com.br/reluzcap/wsreluzcap.asmx/enviasms/testecap/testecap',
+      'https://webservices.twwwireless.com.br/reluzcap/wsreluzcap.asmx/enviasms/testecap/testecap',
       {
         body: JSON.stringify({
           name: event.target.numero.value,
