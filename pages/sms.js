@@ -15,7 +15,8 @@ function SMS(request, response) {
           numero: event.target.mensagem.value
         }),
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
         },
         method: 'POST'
       }
