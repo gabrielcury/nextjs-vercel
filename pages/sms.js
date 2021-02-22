@@ -8,15 +8,15 @@ function SMS(request, response) {
     alert(event.target.mensagem.value);
     
     const res = await fetch(
-      'https://webservices2.twwwireless.com.br/reluzcap/wsreluzcap.asmx/EnviaSMS?NumUsu=teste&Senha=teste&SeuNum=teste&Celular=teste&Mensagem=mensagem',
+      'https://webservices2.twwwireless.com.br/reluzcap/wsreluzcap.asmx/EnviaSMS',
       {
         body: JSON.stringify({
           name: event.target.numero.value,
           numero: event.target.mensagem.value
         }),
         headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*'
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json'
         },
         method: 'POST'
       }
