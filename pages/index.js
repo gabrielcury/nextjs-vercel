@@ -5,13 +5,13 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Api de envio de SMS ZenVia</title>
+        <title>Send API - SMS ZenVia</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Built using Next.js!</a>
+          Welcome to SMS API<a href="https://nextjs.org">Built using Next.js!</a>
         </h1>
 
      
@@ -19,7 +19,7 @@ export default function Home() {
         <div className={styles.grid}>
           <a href="api/sms" className={styles.card}>
             <h3>SMS</h3>
-            <p>Rota de recebimento dos dados e envio do sms.</p>
+            <p>Retrieve and send data to organizations mobile phone.</p>
           </a>
 
    
